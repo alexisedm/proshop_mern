@@ -94,10 +94,10 @@ const ProductEditScreen = ({ match, history }) => {
   return (
     <>
       <Link to='/admin/productlist' className='btn btn-light my-3'>
-        Go Back
+        Atrás
       </Link>
       <FormContainer>
-        <h1>Edit Product</h1>
+        <h1>Editar Producto</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {loading ? (
@@ -107,7 +107,7 @@ const ProductEditScreen = ({ match, history }) => {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId='name'>
-              <Form.Label>Name</Form.Label>
+              <Form.Label>Nombre</Form.Label>
               <Form.Control
                 type='name'
                 placeholder='Enter name'
@@ -117,7 +117,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='price'>
-              <Form.Label>Price</Form.Label>
+              <Form.Label>Precio</Form.Label>
               <Form.Control
                 type='number'
                 placeholder='Enter price'
@@ -127,7 +127,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='image'>
-              <Form.Label>Image</Form.Label>
+              <Form.Label>Imagen</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Enter image url'
@@ -144,7 +144,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='brand'>
-              <Form.Label>Brand</Form.Label>
+              <Form.Label>Marca/Modelo</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Enter brand'
@@ -154,7 +154,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='countInStock'>
-              <Form.Label>Count In Stock</Form.Label>
+              <Form.Label>Cantidad en Stock</Form.Label>
               <Form.Control
                 type='number'
                 placeholder='Enter countInStock'
@@ -164,7 +164,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='category'>
-              <Form.Label>Category</Form.Label>
+              <Form.Label>Categoria</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Enter category'
@@ -174,7 +174,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId='description'>
-              <Form.Label>Description</Form.Label>
+              <Form.Label>Descripción</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Enter description'
@@ -184,7 +184,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Button type='submit' variant='primary'>
-              Update
+              Actualizar
             </Button>
           </Form>
         )}

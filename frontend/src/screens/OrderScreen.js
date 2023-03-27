@@ -96,16 +96,16 @@ const OrderScreen = ({ match, history }) => {
         <Col md={8}>
           <ListGroup variant='flush'>
             <ListGroup.Item>
-              <h2>Shipping</h2>
+              <h2>Envio</h2>
               <p>
-                <strong>Name: </strong> {order.user.name}
+                <strong>Nombre: </strong> {order.user.name}
               </p>
               <p>
                 <strong>Email: </strong>{' '}
                 <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
               </p>
               <p>
-                <strong>Address:</strong>
+                <strong>Direccion:</strong>
                 {order.shippingAddress.address}, {order.shippingAddress.city}{' '}
                 {order.shippingAddress.postalCode},{' '}
                 {order.shippingAddress.country}
@@ -115,25 +115,25 @@ const OrderScreen = ({ match, history }) => {
                   Delivered on {order.deliveredAt}
                 </Message>
               ) : (
-                <Message variant='danger'>Not Delivered</Message>
+                <Message variant='danger'>No Enviado</Message>
               )}
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Payment Method</h2>
+              <h2>Metodo de pago</h2>
               <p>
                 <strong>Method: </strong>
                 {order.paymentMethod}
               </p>
               {order.isPaid ? (
-                <Message variant='success'>Paid on {order.paidAt}</Message>
+                <Message variant='success'>Pagado {order.paidAt}</Message>
               ) : (
-                <Message variant='danger'>Not Paid</Message>
+                <Message variant='danger'>No pagado</Message>
               )}
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Order Items</h2>
+              <h2>Productos de la Orden </h2>
               {order.orderItems.length === 0 ? (
                 <Message>Order is empty</Message>
               ) : (
@@ -169,17 +169,17 @@ const OrderScreen = ({ match, history }) => {
           <Card>
             <ListGroup variant='flush'>
               <ListGroup.Item>
-                <h2>Order Summary</h2>
+                <h2>Resumen de la Orden</h2>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Items</Col>
+                  <Col>Productos</Col>
                   <Col>${order.itemsPrice}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Shipping</Col>
+                  <Col>Costo de envio</Col>
                   <Col>${order.shippingPrice}</Col>
                 </Row>
               </ListGroup.Item>
@@ -219,7 +219,7 @@ const OrderScreen = ({ match, history }) => {
                       className='btn btn-block'
                       onClick={deliverHandler}
                     >
-                      Mark As Delivered
+                      Marcar como enviado
                     </Button>
                   </ListGroup.Item>
                 )}

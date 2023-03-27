@@ -38,13 +38,13 @@ const RegisterScreen = ({ location, history }) => {
 
   return (
     <FormContainer>
-      <h1>Sign Up</h1>
+      <h1>Registrar</h1>
       {message && <Message variant='danger'>{message}</Message>}
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='name'>
-          <Form.Label>Name</Form.Label>
+          <Form.Label>Nombre</Form.Label>
           <Form.Control
             type='name'
             placeholder='Enter name'
@@ -54,7 +54,7 @@ const RegisterScreen = ({ location, history }) => {
         </Form.Group>
 
         <Form.Group controlId='email'>
-          <Form.Label>Email Address</Form.Label>
+          <Form.Label>Correo Electronico</Form.Label>
           <Form.Control
             type='email'
             placeholder='Enter email'
@@ -64,7 +64,7 @@ const RegisterScreen = ({ location, history }) => {
         </Form.Group>
 
         <Form.Group controlId='password'>
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Contraseña</Form.Label>
           <Form.Control
             type='password'
             placeholder='Enter password'

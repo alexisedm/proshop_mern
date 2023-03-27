@@ -13,8 +13,8 @@ const Meta = ({ title, description, keywords }) => {
 
 Meta.defaultProps = {
   title: 'Bienvenido a GuruShop',
-  description: 'we sell the best products for cheap',
-  keywords: 'electronics, buy electronics, cheap electroincs',
+  description: 'Especialistas en Fabricación, Distribución e Instalación de Equipos para Andenes de Carga',
+  keywords: 'Comprometidos con la Calidad y el Cumplimiento',
 }
 
 export default Meta;

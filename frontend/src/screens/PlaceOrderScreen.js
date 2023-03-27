@@ -67,9 +67,9 @@ const PlaceOrderScreen = ({ history }) => {
         <Col md={8}>
           <ListGroup variant='flush'>
             <ListGroup.Item>
-              <h2>Shipping</h2>
+              <h2>Envio</h2>
               <p>
-                <strong>Address:</strong>
+                <strong>Direcció:</strong>
                 {cart.shippingAddress.address}, {cart.shippingAddress.city}{' '}
                 {cart.shippingAddress.postalCode},{' '}
                 {cart.shippingAddress.country}
@@ -85,7 +85,7 @@ const PlaceOrderScreen = ({ history }) => {
             <ListGroup.Item>
               <h2>Order Items</h2>
               {cart.cartItems.length === 0 ? (
-                <Message>Your cart is empty</Message>
+                <Message>El carrito de compra esta vacio.</Message>
               ) : (
                 <ListGroup variant='flush'>
                   {cart.cartItems.map((item, index) => (
@@ -119,11 +119,11 @@ const PlaceOrderScreen = ({ history }) => {
           <Card>
             <ListGroup variant='flush'>
               <ListGroup.Item>
-                <h2>Order Summary</h2>
+                <h2>Resumen de Orden</h2>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Items</Col>
+                  <Col>Productos</Col>
                   <Col>${cart.itemsPrice}</Col>
                 </Row>
               </ListGroup.Item>
